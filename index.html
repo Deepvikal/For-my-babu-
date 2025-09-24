@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Vaishnavi 🎉</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      text-align: center;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      color: #fff;
+      overflow: hidden;
+    }
+    .page {
+      display: none;
+      height: 100vh;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .active {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+    h1, h2 {
+      margin: 10px 0;
+    }
+    img {
+      max-width: 90%;
+      border-radius: 15px;
+      margin: 15px 0;
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
+    }
+    button {
+      background: #ff6f91;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      color: #fff;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 20px;
+    }
+    button:hover {
+      background: #ff3e70;
+      transform: scale(1.05);
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page 1 -->
+  <div class="page active" id="page1">
+    <h1>🎂 Happy Birthday Vaishnavi 💖</h1>
+    <h2>You’re my sunshine ☀️</h2>
+    <img src="https://placekitten.com/400/300" alt="Vaishnavi">
+    <button onclick="nextPage()">Next ➡️</button>
+  </div>
+
+  <!-- Page 2 -->
+  <div class="page" id="page2">
+    <h1>🌸 Beautiful Memories 🌸</h1>
+    <img src="https://placekitten.com/400/350" alt="Memory">
+    <h2>I’m so lucky to have you in my life 💕</h2>
+    <button onclick="nextPage()">Next ➡️</button>
+  </div>
+
+  <!-- Page 3 -->
+  <div class="page" id="page3">
+    <h1>💌 A Special Note 💌</h1>
+    <p style="max-width: 300px; font-size:18px;">
+      Vaishu, you’re not just my love, you’re my everything.  
+      On this birthday, I promise to always stand by you,  
+      love you more than yesterday, and less than tomorrow. 💖
+    </p>
+    <button onclick="nextPage()">Next ➡️</button>
+  </div>
+
+  <!-- Page 4 -->
+  <div class="page" id="page4">
+    <h1>🎉 Surprise! 🎉</h1>
+    <h2>This website is just for YOU ❤️</h2>
+    <img src="https://placekitten.com/400/400" alt="Surprise">
+    <h2>Happy Birthday once again, my love! 💖</h2>
+  </div>
+
+  <script>
+    let currentPage = 1;
+    function nextPage() {
+      document.getElementById("page" + currentPage).classList.remove("active");
+      currentPage++;
+      if (currentPage > 4) currentPage = 1;
+      document.getElementById("page" + currentPage).classList.add("active");
+    }
+  </script>
+</body>
+</html>
