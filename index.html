@@ -26,7 +26,7 @@
       align-items: center;
       animation: fadeIn 0.8s ease-in-out;
     }
-    h1, h2 {
+    h1, h2, p {
       margin: 10px 0;
     }
     img {
@@ -62,14 +62,14 @@
   <div class="page active" id="page1">
     <h1>🎂 Happy Birthday Vaishnavi 💖</h1>
     <h2>You’re my sunshine ☀️</h2>
-    <img src="https://placekitten.com/400/300" alt="Vaishnavi">
-    <button onclick="nextPage()">Next ➡️</button>
+    <img src="images/photo1.jpg" alt="Vaishnavi">
+    <button onclick="startMusic(); nextPage()">Next ➡️</button>
   </div>
 
   <!-- Page 2 -->
   <div class="page" id="page2">
     <h1>🌸 Beautiful Memories 🌸</h1>
-    <img src="https://placekitten.com/400/350" alt="Memory">
+    <img src="images/photo2.jpg" alt="Memory">
     <h2>I’m so lucky to have you in my life 💕</h2>
     <button onclick="nextPage()">Next ➡️</button>
   </div>
@@ -89,9 +89,15 @@
   <div class="page" id="page4">
     <h1>🎉 Surprise! 🎉</h1>
     <h2>This website is just for YOU ❤️</h2>
-    <img src="https://placekitten.com/400/400" alt="Surprise">
+    <img src="images/photo1.jpg" alt="Surprise">
     <h2>Happy Birthday once again, my love! 💖</h2>
   </div>
+
+  <!-- Music -->
+  <audio id="bg-music" loop>
+    <source src="music/birthday.mp3" type="audio/mpeg">
+    Your browser does not support the audio tag.
+  </audio>
 
   <script>
     let currentPage = 1;
@@ -100,6 +106,11 @@
       currentPage++;
       if (currentPage > 4) currentPage = 1;
       document.getElementById("page" + currentPage).classList.add("active");
+    }
+
+    function startMusic() {
+      const music = document.getElementById("bg-music");
+      music.play();
     }
   </script>
 </body>
