@@ -1,3 +1,37 @@
+<!-- Floating GIFs -->
+<div class="floating-gifs">
+  <img src="images/cake.gif" class="gif" alt="gif1">
+  <img src="images/confetti.gif" class="gif" alt="gif2">
+  <img src="images/balloons.gif" class="gif" alt="gif3">
+</div>
+
+<style>
+  .floating-gifs {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* lets you still click buttons */
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .floating-gifs .gif {
+    position: absolute;
+    width: 80px; /* size of gifs */
+    animation: floatRandom 20s linear infinite;
+  }
+
+  /* Random float effect */
+  @keyframes floatRandom {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(40vw, 20vh); }
+    50% { transform: translate(10vw, 70vh); }
+    75% { transform: translate(80vw, 30vh); }
+    100% { transform: translate(0, 0); }
+  }
+</style>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +57,7 @@
   <h1>🎂 Happy Birthday Vaishnavi 💖</h1>
   <h2>You’re my sunshine ☀️</h2>
   <img src="images/photo1.jpg" alt="Vaishnavi">
-  <img src="images/balloons.gif" class="gif-float" alt="Balloons">
+  <img 
   <button id="nextBtn1">Next ➡️</button>
 </div>
 
@@ -31,7 +65,6 @@
 <div class="page" id="page2">
   <h1>🌸 Memories 🌸</h1>
   <img src="images/photo2.jpg" alt="Memory">
-  <img src="images/cake.gif" class="gif-float" alt="Cake">
   <button id="nextBtn2">Next ➡️</button>
 </div>
 
@@ -45,8 +78,7 @@
 <!-- Page 4 -->
 <div class="page" id="page4">
   <h1>🎉 Surprise! 🎉</h1>
-  <img src="images/photo3.jpg" alt="Surprise">
-  <img src="images/confetti.gif" class="gif-float" alt="Confetti">
+  <img src="images/photo3.jpg" alt="Surprise"
   <h2>Happy Birthday, my love 💖</h2>
 </div>
 
